@@ -1,0 +1,120 @@
+:root {
+	/* REQUIREMENT: Overrides default bootstrap colors */
+	--bs-primary: #0c2340;
+	--bs-primary-rgb: 12, 35, 64;
+	--accent-gold: #fec524;
+	--font-display: "Poppins", sans-serif;
+	--font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* REQUIREMENT: Element selector, padding */
+body {
+	padding-top: 76px; /* clears the fixed navbar */
+	color: #1c1c1e;
+}
+
+/* ---------- Navbar ---------- */
+/* REQUIREMENT: Class selector */
+.navbar {
+	border-bottom: 1px solid #ececec;
+}
+
+/* REQUIREMENT: Custom Colors & Typography */
+.navbar-brand {
+	font-family: var(--font-mono);
+	font-weight: 600;
+	color: var(--bs-primary) !important;
+}
+
+.navbar .nav-link {
+	font-weight: 500;
+}
+
+.navbar .nav-link.active {
+	color: var(--bs-primary) !important;
+	border-bottom: 3px solid var(--accent-gold);
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3, .name {
+	font-family: var(--font-display);
+}
+
+/* ---------- Home ---------- */
+.homeimg {
+	max-width: 170px;
+	/* REQUIREMENT: Shadow */
+	filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5));
+}
+
+/* ---------- Hobby cards ---------- */
+.card-img-top {
+	height: 200px;
+	object-fit: cover;
+}
+
+.cardtitle {
+	font-family: var(--font-display);
+	font-weight: 600;
+	text-underline-offset: 4px;
+}
+
+.hobby-card {
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hobby-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+}
+
+/* ---------- Projects (accordion) ---------- */
+.accordion-button {
+	font-family: var(--font-mono);
+	font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+	color: var(--bs-primary);
+	background-color: rgba(254, 197, 36, 0.15);
+}
+
+.accordion-button:focus {
+	box-shadow: 0 0 0 0.2rem rgba(12, 35, 64, 0.25);
+}
+
+.project-repo-link {
+	font-family: var(--font-mono);
+}
+
+/* ---------- Resume ---------- */
+.name {
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+/* REQUIREMENT: Margin */
+.category {
+	margin-top: 2rem;
+	font-weight: 600;
+	color: var(--bs-primary);
+}
+
+/* ---------- Footer ---------- */
+.footerimg {
+	width: 64px;
+	height: auto;
+	transition: transform 0.15s ease;
+}
+
+.footerimg:hover {
+	transform: scale(1.12);
+}
+
+/* ---------- Accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+	.hobby-card,
+	.footerimg {
+		transition: none;
+	}
+}
