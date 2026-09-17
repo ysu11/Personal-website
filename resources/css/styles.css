@@ -118,3 +118,10 @@ h1, h2, h3, .name {
 		transition: none;
 	}
 }
+
+/* So the button and footer don't show up when someone downloads the resume page */
+@media print {
+    button, .btn, .navbar, footer {
+        display: none;
+    }
+}
